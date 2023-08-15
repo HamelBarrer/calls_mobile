@@ -1,4 +1,4 @@
-import 'dart:ui';
+import 'package:flutter/material.dart';
 
 class CustomColors {
   static const Color grey100 = Color(0xFF8C959E);
@@ -11,4 +11,10 @@ class CustomColors {
 
   static const Color blue100 = Color(0xFF34A1EC);
   static const Color blue200 = Color(0xFF5864F0);
+}
+
+class CustomLayout {
+  static const EdgeInsets paddingAll = EdgeInsets.all(15);
+  static const EdgeInsets paddingVertial = EdgeInsets.symmetric(vertical: 15);
+  static BorderRadius borderRadius = BorderRadius.circular(5);
 }
