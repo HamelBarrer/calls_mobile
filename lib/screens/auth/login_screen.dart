@@ -1,3 +1,4 @@
+import 'package:calls_mobile/constants/colors_constant.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -7,9 +8,17 @@ class LoginScreen extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
-      appBar: AppBar(),
+      backgroundColor: CustomColors.black100,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
       body: const Center(
-        child: Text('Login'),
+        child: Text(
+          'Login',
+          style: TextStyle(
+            color: CustomColors.grey200,
+          ),
+        ),
       ),
     );
   }
