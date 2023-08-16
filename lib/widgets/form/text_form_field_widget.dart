@@ -2,21 +2,32 @@ import 'package:calls_mobile/constants/view_constant.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class TextFieldWidget extends HookConsumerWidget {
+class TextFormFieldWidget extends HookConsumerWidget {
   final TextEditingController controller;
+  final FocusNode focusNode;
   final String hintText;
   final bool obscureText;
+  final String messageError;
 
-  const TextFieldWidget({
+  const TextFormFieldWidget({
     super.key,
     required this.controller,
+    required this.focusNode,
     required this.hintText,
     this.obscureText = false,
+    required this.messageError,
   });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return TextField(
+    return TextFormField(
+      focusNode: focusNode,
+      validator: (value) {
+        if (value == null || value.isEmpty) {
+          return messageError;
+        }
+        return null;
+      },
       controller: controller,
       obscureText: obscureText,
       style: const TextStyle(
