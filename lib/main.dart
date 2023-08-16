@@ -1,4 +1,5 @@
 import 'package:calls_mobile/providers/router_provider.dart';
+import 'package:calls_mobile/utils/color_schema_util.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -12,7 +13,9 @@ class App extends HookConsumerWidget {
 
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
+      themeMode: ThemeMode.dark,
       theme: ThemeData(
+        colorScheme: darkColorScheme,
         useMaterial3: true,
       ),
       routerConfig: router,

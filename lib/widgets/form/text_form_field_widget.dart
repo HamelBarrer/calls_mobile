@@ -31,14 +31,12 @@ class TextFormFieldWidget extends HookConsumerWidget {
       controller: controller,
       obscureText: obscureText,
       style: const TextStyle(
-        color: CustomColors.grey100,
         fontWeight: FontWeight.w700,
       ),
       decoration: InputDecoration(
         contentPadding: CustomLayout.paddingAll,
         hintText: hintText,
         hintStyle: const TextStyle(
-          color: CustomColors.grey100,
           fontWeight: FontWeight.w700,
         ),
         enabledBorder: OutlineInputBorder(
@@ -47,7 +45,6 @@ class TextFormFieldWidget extends HookConsumerWidget {
         focusedBorder: OutlineInputBorder(
           borderRadius: CustomLayout.borderRadius,
         ),
-        fillColor: CustomColors.black200,
         filled: true,
       ),
     );
