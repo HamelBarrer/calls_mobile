@@ -23,15 +23,11 @@ class AuthService {
       final dataJson = jsonDecode(response.body);
 
       if (response.statusCode != 200) {
-        print('errror 1');
-        print(dataJson['message']);
         throw dataJson['message'];
       }
 
       return AuthUserModel.fromJsom(dataJson);
     } catch (e) {
-      print('errror 2');
-      print(e.toString());
       throw e.toString();
     }
   }

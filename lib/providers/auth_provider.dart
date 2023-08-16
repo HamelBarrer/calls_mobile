@@ -24,7 +24,6 @@ final registerAuthenticatedUserProvider =
     final authUser = await authService.login(auth);
     await sharedProvider.setString('auth', jsonEncode(authUser.toJsom()));
   } catch (e) {
-    print('Error $e');
     ref.watch(errorProvider.notifier).state = e.toString();
   }
 });

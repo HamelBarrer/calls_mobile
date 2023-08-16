@@ -18,13 +18,13 @@ class AuthModel {
 class AuthUserModel {
   final int userId;
   final String username;
-  final String avatar;
+  final String? avatar;
   final String token;
 
   AuthUserModel({
     required this.userId,
     required this.username,
-    required this.avatar,
+    this.avatar = '',
     required this.token,
   });
 
